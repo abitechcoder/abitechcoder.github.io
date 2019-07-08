@@ -1,3 +1,14 @@
+.flex-container {
+    display: -webkit-flex;
+    display: flex;  
+    -webkit-flex-flow: row wrap;
+    flex-flow: row wrap;
+}
+
+.flex-container > * {
+    flex: 1 100%;
+}
+
 header{
 	background: #4E0D3A;
 	height: 400px;	
@@ -17,18 +28,9 @@ header img{
 	margin: auto;
 }
 
-header > .item1{
-	width: 50%;
-    float: left;
-    padding: 15px;
-}
-
 header > .item2{
 	background-color: #720D5D;
-	width: 43%;
 	height: 370px;
-    float: right;
-    padding: 15px;
 }
 
 .item2 h2{
@@ -48,6 +50,7 @@ div.moving-text{
 	font-weight: bold;
 	padding: 10px;
 	background-color: #E30425;
+	box-sizing: border-box;
 }
 
 marquee{
@@ -58,6 +61,7 @@ marquee{
 
 .content h2{
 	color:	#E30425;
+	text-align: center;
 }
 
 .content h3, ul li{
@@ -66,6 +70,7 @@ marquee{
 	font-family: cursive;
 	word-spacing: 5px;
 	line-height: 50px;
+	list-style-type: none;
 }
 
 .info{
@@ -87,53 +92,6 @@ footer{
 	margin-top: 40px;
 }
 
-div.gallery {
-    border: 1px solid #ccc;
-}
-
-div.gallery:hover {
-    border: 1px solid #777;
-}
-
-div.gallery img {
-    width: 100%;
-    height: 400px;
-}
-
-div.desc {
-    padding: 15px;
-    text-align: center;
-}
-
-* {
-    box-sizing: border-box;
-}
-
-.responsive {
-    padding: 0 6px;
-    float: left;
-    width: 24.99999%;
-}
-
-@media only screen and (max-width: 700px){
-    .responsive {
-        width: 49.99999%;
-        margin: 6px 0;
-    }
-}
-
-@media only screen and (max-width: 500px){
-    .responsive {
-        width: 100%;
-    }
-}
-
-.clearfix:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
 #gallery{
 	font-size: 40px;
 	font-family: cursive;
@@ -145,4 +103,15 @@ div.desc {
 
 #galhr{
 	margin: 40px;
+}
+
+.carousel-inner{
+	width: 100%;
+	max-height: 600px !important;
+}
+
+#myCarousel{
+	max-width: 600px;
+	margin: 0px auto;
+	box-sizing: border-box;
 }
